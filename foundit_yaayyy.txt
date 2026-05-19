@@ -1,0 +1,270 @@
+Successfull:Arusha A Bhatt
+Successfull:Anya Jain
+Successfull:Veeraj Laata
+Successfull:Suryansh Reddy Charukupally
+Successfull:Mikhail Chacko Jacob
+Successfull:Smrithi Ganesh
+Successfull:Shruti Sundaram
+Successfull:Vaishnavi Yeddula
+Successfull:Emmanuel Roshan Jaiby
+Successfull:Arush Sharma
+Successfull:Sanath Hegde
+Successfull:Aishani Gajrani
+Successfull:Ansh Prashant Mantri
+Error for Samjnaa Sunil Kulkarni: 403 Client Error: Forbidden for url: https://web.iiit.ac.in/~samjnaa.kulkarni/images/pfp.jpg
+Successfull:Navneet Suresh Nair
+Successfull:Shevani Vinod
+Successfull:Vidit Gopal Kovvali
+Successfull:Jayanth Raveendra
+Successfull:Samyak Shon Shah
+Successfull:Shaun Thomas
+Successfull:Ashwin Krishna Hari
+Successfull:Sushri Srabani Mallik
+404 Error: Image NOT FOUND for Dantam Vishnu Priya
+Successfull:Yarkala Shruthik
+Error for Ajaya Dash: 403 Client Error: Forbidden for url: https://web.iiit.ac.in/~ajaya.dash/images/pfp.jpg
+Successfull:Bhogireddi Bhramar
+Successfull:Giri Pranathi
+Successfull:Akshat Rana
+Successfull:Subhasree Subhalaxmi Sahoo
+Successfull:Samarth Gupta
+Successfull:Kozhukkulli Ram Kumar
+Successfull:Muthoju Avinash
+404 Error: Image NOT FOUND for Keerthana S
+404 Error: Image NOT FOUND for Ravi
+Successfull:Ghodasara Tej Paresh
+404 Error: Image NOT FOUND for Yanik Dewangan
+Successfull:Abhipsa Mishra
+404 Error: Image NOT FOUND for Vinay Dhakad
+Error for Lolugu Karthikeya: 403 Client Error: Forbidden for url: https://web.iiit.ac.in/~lolugu.karthikeya/images/pfp.jpg
+Successfull:Bhaveshkumar Prajapati
+Successfull:H Kaarthik
+Successfull:Harsimran Kaur
+404 Error: Image NOT FOUND for Aryan Kumar Jaiswal
+Successfull:Bharath Naidu Kilari
+Successfull:Chhabra Rangraj Sanjay
+404 Error: Image NOT FOUND for Yelisetti Prudhvi Veera Surya Chakra Pavan
+Successfull:Parth Nyati
+Error for Vg Akhilesh: 403 Client Error: Forbidden for url: https://web.iiit.ac.in/~akhilesh.ganesh/images/pfp.jpg
+404 Error: Image NOT FOUND for Stuti Goswami
+Successfull:Ritvik Bansal
+Successfull:Ganti Inesh
+Error for Arnav S Nainwar: 403 Client Error: Forbidden for url: https://web.iiit.ac.in/~arnav.nainwar/images/pfp.jpg
+Successfull:Atharv Gupta
+Successfull:Kovidh Immadisetty
+Successfull:Rishabh Goyal
+Successfull:Kancharla Sai Srihith
+Successfull:Mitul Choudhary
+Successfull:Aranya Karra
+Successfull:Ananya Raju Belakoppa
+Successfull:Chennupati Yashitha
+Successfull:Marthala Satwik Reddy
+Successfull:Akshit Singla
+Successfull:Kandhivanam Bhavagna
+Successfull:Lavu Darshan
+Successfull:Suhan Kashyap
+Successfull:Anubhav Dubey
+Successfull:Mamidisetty Gnaneswar
+404 Error: Image NOT FOUND for Ojas Ganesh Deshpande
+Successfull:Goli Saicharan Reddy
+Successfull:Ikkurthi Siva Mythreyi
+Successfull:Kodukulla V K Surya Kiran
+404 Error: Image NOT FOUND for Suhaan Rupani
+Successfull:Masood Shahid
+Successfull:Raval Chirag Vimalkumar
+Error for Pratham Goyal: 403 Client Error: Forbidden for url: https://web.iiit.ac.in/~pratham.goyal/images/pfp.jpg
+Successfull:Adulla Charvitha Reddy
+Successfull:Radhika Sahu
+Successfull:Bhatt Rudra Sudhirkumar
+Successfull:Yug Divyang Patel
+Successfull:Anumolu Karthika
+Successfull:Thoran Idupuganti
+Successfull:Gurkirat Singh Jawandha
+Successfull:Udit Bajoriya
+Successfull:Yarlagadda Raga Sindhu
+Successfull:Yerraguntla Venkata Pavan Kumar
+Successfull:Aarav Niraj Muni
+404 Error: Image NOT FOUND for Sahejreet Singh Sethi
+Successfull:Raghav S Hegde
+Successfull:Hiten Manchanda
+Error for Harshit Mittal Shah: 403 Client Error: Forbidden for url: https://web.iiit.ac.in/~harshit.shah/images/pfp.jpg
+Successfull:Jeswin Joyal
+Successfull:Modi Naman Prashantkumar
+Successfull:Kotha Lalitha Tejaswini
+Successfull:Shravanth Kuchipudi
+Successfull:Rajat Gupta
+Successfull:Samhith Rao
+Successfull:Sagili Kanishka
+Successfull:Hrisheek Patnala
+Successfull:Arush Makrand Satarkar
+Successfull:Aniket Goel
+Successfull:Nawander Raghavendra Navneet
+Successfull:Jishnu Madhav
+404 Error: Image NOT FOUND for Kethireddy Hitesh Reddy
+Successfull:Chebrolu Akash
+Successfull:Ashwin Kumar Mishra
+Successfull:Kakarla Parnika Sai
+Successfull:Batthula Sai Varshith Reddy
+Successfull:Siriki Akshara
+Successfull:Sidlagatta Lakshmi Aditya Kartikeya
+Successfull:Choda Naga Venkata Tanush
+Successfull:Ammisetty Khyati
+Successfull:Gaddamidi Akshara
+Successfull:Mareddy Charitha Reddy
+Successfull:Satyam Garg
+Error for Sarthak Anil Chaudhari: 403 Client Error: Forbidden for url: https://web.iiit.ac.in/~sarthak.chaudhari/images/pfp.jpg
+Successfull:Shaurya Bansal
+Error for Bhamidipalli Sai Surya Samhith: 403 Client Error: Forbidden for url: https://web.iiit.ac.in/~bhamidipalli.samhith/images/pfp.jpg
+Successfull:Garvit Agrawal
+Successfull:Parv Jain
+404 Error: Image NOT FOUND for Kalp Shrenik Doshi
+Successfull:Lakshya Gupta
+Successfull:Nipun Jain
+Successfull:Harkirat Singh
+Successfull:Sidharth Vutukuru
+Successfull:Aarush Maheshwari
+Successfull:Abhinav Singha
+Successfull:Pranay Mehtta
+Successfull:Aneesh Raman
+Successfull:Visuvardhagobalan S S
+Successfull:Panchotiya Daksh Dipakbhai
+Successfull:Nara Lakshmi Sankeerth
+Successfull:Amey Patel
+Successfull:Shambhavi Jha
+Successfull:Jay Kartik Mehta
+Successfull:Modukuri Hema Varshini
+Successfull:Nune Parthav Sai
+Successfull:Anikait Milind Kulkarni
+Successfull:Yuvraj Jain
+Successfull:Saradava Yagna Vimalkumar
+Successfull:Rishima Rajput
+Successfull:Achanta Shashank Dinesh
+Successfull:N Vaishnavi
+Successfull:Vinay Kumar Das
+Successfull:Shreshth Mehrotra
+Successfull:Arshia Aggarwal
+Successfull:Pranav Gangwal
+Successfull:Yerradoddi Gagan Adithya Reddy
+Successfull:Panchmahalkar Riya
+Successfull:Somuri Rohit
+Successfull:Akshat Gupta
+Successfull:Divyansh Goyal
+Successfull:Yalamaddi Neshanth
+Successfull:Suravaram Pranay Reddy
+Successfull:Lathiya Vaibhav Vijaybhai
+Successfull:Navya Saini
+Successfull:Shubham Gupta
+Successfull:Rushil Grover
+Successfull:Neha Reddy Duvvuru
+Successfull:Kishen Narikimilli
+Successfull:Varshith Anthagiri
+Successfull:Soham Chakraborty
+Successfull:Hasini Toleti
+404 Error: Image NOT FOUND for Arishta Jain
+Successfull:Madhu Shreya
+Successfull:Rishit Nanda
+Successfull:Dhruva Anand
+Successfull:Tarsh Singh
+Successfull:Saarthak Singh
+Error for Shubham Jha: 403 Client Error: Forbidden for url: https://researchweb.iiit.ac.in/~shubham.jha/images/pfp.jpg
+Successfull:Somesh Pawan Kamad
+Successfull:Swayam Dilip Hadape
+Successfull:Avani Khanwalkar
+404 Error: Image NOT FOUND for Atharva Sharma
+Successfull:Sai Akshara Bysani
+Successfull:Palem Shamathmika
+Successfull:Tushita Arora
+Successfull:Sumanyu Aggarwal
+Successfull:Pudi Satya Sai Teja
+Successfull:Shloka Gupta
+Successfull:Nitya Sanjay Joshi
+Successfull:Tanisha P
+Successfull:Hershi Jaiswal
+404 Error: Image NOT FOUND for Pratyush Kumar Mahato
+404 Error: Image NOT FOUND for Kulkarni Aryan Pravin
+Successfull:Avani Mandlik
+Successfull:Atharva Morchale
+Successfull:Manan Shriram Deopurkar
+Successfull:Ashwin A
+Successfull:Sheza Zakariya
+Successfull:Ambika S
+Successfull:Satyarth Gupta
+Successfull:Suhaan Dabra
+Successfull:Kimaya Arora
+Successfull:Uman Debnath
+Successfull:Avi Gupta
+Successfull:Shradha Kedia
+Successfull:Sarveshchandiran B
+Successfull:Ashish Shukla
+Successfull:Nandini S
+Successfull:Arkaprava Jana
+Successfull:Ramdas Cheruvary Kottayi
+Successfull:Rensi Patidar
+Successfull:Bhumi Chaudhari
+404 Error: Image NOT FOUND for Kattagani Haasini
+Successfull:Neeraj N
+Successfull:Sohni Patra
+Error for Priyanshu Sekhar De: 403 Client Error: Forbidden for url: https://researchweb.iiit.ac.in/~priyanshu.de/images/pfp.jpg
+Successfull:Vishesh Sharma
+Successfull:Anisha Soni
+404 Error: Image NOT FOUND for Satkar Juneja
+404 Error: Image NOT FOUND for Tanmay Singh
+Error for Dushyant Kumar: 403 Client Error: Forbidden for url: https://researchweb.iiit.ac.in/~dushyant.kumar/images/pfp.jpg
+Successfull:Pragyanshu Lavania
+Successfull:Aratrika Roy
+Error for Himank Goyal: 403 Client Error: Forbidden for url: https://researchweb.iiit.ac.in/~himank.goyal/images/pfp.jpg
+404 Error: Image NOT FOUND for Adimulam Snigdha
+Successfull:Pranit Sachdeva
+Successfull:Sanjita Kumar
+Successfull:Aditya Ayilliath Kutteri
+Successfull:Srinivas Koushik Junnuru
+Successfull:Vidushi Agarwal
+Successfull:Vinayak Sharma
+Successfull:Bhargav Shukla
+Successfull:Pranjal Baranwal
+Error for Zubin Mishra: 403 Client Error: Forbidden for url: https://researchweb.iiit.ac.in/~zubin.mishra/images/pfp.jpg
+Successfull:Swami Aayush Rahul
+Successfull:Yashaswi Priya
+Successfull:Arjun Tikoo
+Successfull:Rushil Sharma
+Successfull:Renny Sharma
+404 Error: Image NOT FOUND for Mekala Ram Kowshik
+Successfull:Sanyam Asthana
+Successfull:Sai Sreemayee Sistla
+Successfull:Apoorv Joshi
+Successfull:B Ananya Pai
+Successfull:Baani Solanki
+Successfull:Avik Majumder
+Successfull:Tejas Agarwal
+Successfull:Arshia Jain
+Successfull:Vulugonda Aakanksha
+404 Error: Image NOT FOUND for Paladugu Naaga Sai Abhinav Tej
+404 Error: Image NOT FOUND for Harish Manickam
+Successfull:Ayaansh Ashish Solanki
+Successfull:Aryan Pandey
+Error for Himanshi D Barot: 403 Client Error: Forbidden for url: https://researchweb.iiit.ac.in/~himanshi.barot/images/pfp.jpg
+Successfull:Tejaskumar E
+Successfull:Yash Srivastava
+Successfull:Aarushi Goyal
+Successfull:Shaurya Vardhan Singh Chandel
+Successfull:Atharva Desai
+Successfull:Chirag Goyal
+Successfull:Vanshika Rallapalli
+Successfull:Abdullah Rahmani
+Successfull:Shourya Dixit
+404 Error: Image NOT FOUND for Challa Sai Siddhanth
+Successfull:Vardaan Goel
+Successfull:Arnav Gupta
+404 Error: Image NOT FOUND for Vanshrajsinh Chauhan
+Successfull:Daniel Vincent
+Successfull:Hansika
+404 Error: Image NOT FOUND for Satyendhran L
+Successfull:Malini Goyal
+Successfull:Addepalli Naga Lalith Mukund
+Successfull:Saseeth Srilok Majeti
+Successfull:Soubhagya Ranjan Biswal
+Successfull:Sibyala Naga Saketh
+Successfull:Mohammed Ibrahim Bin Faisal
+404 Error: Image NOT FOUND for Saharsh S
+404 Error: Image NOT FOUND for Aarshiya Mohapatra
+Successfull:Harry Aadith

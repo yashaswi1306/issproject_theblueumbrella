@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Let's login your face hihi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sand: #f5efe6;
+            --ocean: #7bbfd4;
+            --ocean-dark: #5aa3bc;
+            --ocean-light: #c6e4ef;
+            --foam: #eef8fb;
+            --text: #3a5f6f;
+            --accent: #e07b6a;
+            --wave: #a8d8e8;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--sand);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 220px;
+            background: var(--ocean);
+            clip-path: ellipse(60% 100% at 50% 0%);
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            height: 160px;
+            background: var(--ocean-light);
+            clip-path: ellipse(55% 100% at 50% 100%);
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            background: white;
+            border-radius: 28px;
+            padding: 40px 36px;
+            max-width: 460px;
+            width: 90%;
+            box-shadow: 0 8px 40px rgba(90, 163, 188, 0.2);
+            text-align: center;
+        }
+
+        .wave-deco {
+            font-size: 2rem;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Times New Roman';
+            color: var(--ocean-dark);
+            font-size: 1.7rem;
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        video {
+            border-radius: 18px;
+            width: 100%;
+            max-width: 360px;
+            border: 3px solid var(--ocean-light);
+            box-shadow: 0 4px 20px rgba(123, 191, 212, 0.3);
+        }
+
+        button {
+            margin-top: 22px;
+            padding: 13px 36px;
+            font-size: 1rem;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            background: var(--ocean);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            letter-spacing: 0.03em;
+            transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+            box-shadow: 0 4px 16px rgba(123, 191, 212, 0.4);
+        }
+
+        button:hover {
+            background: var(--ocean-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(123, 191, 212, 0.5);
+        }
+
+        button:disabled {
+            background: #c5dde6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        canvas { display: none; }
+
+        #message {
+            margin-top: 14px;
+            color: var(--text);
+            font-size: 0.9rem;
+            font-weight: 600;
+            min-height: 20px;
+        }
+
+        .footer-wave {
+            margin-top: 20px;
+            font-size: 0.75rem;
+            color: var(--wave);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span class="wave-deco">🌊</span>
+        <h1>Show me your pretty pretty face</h1>
+        <p class="subtitle">face recognition login</p>
+        <video id="video" autoplay playsinline></video>
+        <br>
+        <button id="loginBtn">Login using face card</button>
+        <canvas id="canvas" style="display:none"></canvas>
+        <p id="message"></p>
+        <p class="footer-wave">~ <3 · Baani · Yashu · Ren · ;) ~</p>
+    </div>
+
+    <script>
+        let stream = null;
+        async function startCamera() 
+        {
+            try 
+            {
+                stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                document.getElementById('video').srcObject = stream;
+            }
+            catch (err) 
+            {
+                document.getElementById('message').innerText = "whoops! camera error: " + err.message;
+            }
+        }
+        function stopCamera() 
+        {
+            if (stream) 
+            { stream.getTracks().forEach(track => track.stop()); }
+        }
+        async function capture() 
+        {
+            const btn = document.getElementById('loginBtn');
+            const message = document.getElementById('message');
+            const video = document.getElementById('video');
+            const canvas = document.getElementById('canvas');
+            btn.disabled = true;
+            message.innerText = "Lemme see...";
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(video, 0, 0);
+            const image = canvas.toDataURL('image/jpeg', 0.8).split(',')[1];
+            try {
+                const res = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include',
+                    body: JSON.stringify({ image_data: image })
+                });
+                const data = await res.json();
+                if (res.ok) 
+                {
+                    stopCamera();
+                    message.innerText = "We got you in mate mwuahhh";
+                    window.location.href = '/dashboard.html';
+                }
+                else 
+                {
+                    message.innerText = data.message || "what face is this? no entry";
+                    btn.disabled = false;
+                }
+                }
+                catch(err) 
+                {
+                    message.innerText = "Tera net slow hai kya bunty?: " + err.message;
+                    btn.disabled = false;
+                }
+        }
+            document.getElementById('loginBtn').addEventListener('click', capture);
+            startCamera();
+        </script>
+    </body >
+</html >

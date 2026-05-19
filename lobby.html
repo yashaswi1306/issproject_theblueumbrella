@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lobby</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sand: #f5efe6;
+            --ocean: #7bbfd4;
+            --ocean-dark: #5aa3bc;
+            --ocean-light: #c6e4ef;
+            --foam: #eef8fb;
+            --text: #3a5f6f;
+            --accent: #e07b6a;
+            --wave: #a8d8e8;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--sand);
+            min-height: 100vh;
+            padding: 0 0 80px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 180px;
+            background: var(--ocean);
+            clip-path: ellipse(60% 100% at 50% 0%);
+            z-index: 0;
+        }
+
+        /* ── Lobby ── */
+        #lobby-section {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 30px 20px 0;
+        }
+
+        .lobby-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .lobby-header .emoji { font-size: 2.2rem; display: block; }
+
+        h2 {
+            font-family: 'Times New Roman';
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 4px;
+        }
+
+        .lobby-header .sub {
+            color: var(--ocean-light);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        #users {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .card {
+            background: white;
+            padding: 18px 14px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(90, 163, 188, 0.15);
+            text-align: center;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(90, 163, 188, 0.25); }
+
+        .card .player-name {
+            font-weight: 700;
+            color: var(--text);
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .card .elo {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--ocean-dark);
+            background: var(--ocean-light);
+            border-radius: 20px;
+            padding: 2px 10px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .card button {
+            padding: 7px 18px;
+            border: none;
+            border-radius: 50px;
+            background: var(--ocean);
+            color: white;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 0.82rem;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .card button:hover:not(:disabled) {
+            background: var(--ocean-dark);
+            transform: scale(1.05);
+        }
+
+        .card button:disabled {
+            background: #dde8ec;
+            color: #aac4cc;
+            cursor: not-allowed;
+        }
+
+        .lobby-footer {
+            text-align: center;
+            margin-top: 28px;
+        }
+
+        .lobby-footer a {
+            color: var(--ocean-dark);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+        }
+
+        .lobby-footer a:hover { color: var(--accent); }
+
+        #game-section {
+            display: none;
+            position: relative;
+            z-index: 1;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px 20px 0;
+        }
+
+        .game-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .game-header h2 {
+            color: white;
+            margin-bottom: 6px;
+        }
+
+        #status {
+            color: var(--ocean-light);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .board-wrap {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 8px 40px rgba(90, 163, 188, 0.2);
+        }
+
+        .status-bar {
+            text-align: center;
+            margin-bottom: 16px;
+            font-weight: 700;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        #board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .cell {
+            aspect-ratio: 1;
+            background: var(--foam);
+            border: 2.5px solid var(--ocean-light);
+            border-radius: 14px;
+            font-size: 2.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Times New Roman';
+            color: var(--ocean-dark);
+            transition: background 0.15s, transform 0.1s;
+            width: 100%;
+        }
+
+        .cell:hover:not(:disabled) {
+            background: var(--ocean-light);
+            transform: scale(1.04);
+        }
+
+        .cell:disabled { cursor: not-allowed; opacity: 0.7; }
+    </style>
+</head>
+<body>
+    <div id="lobby-section">
+        <div class="lobby-header">
+            <span class="emoji">🌊</span>
+            <h2>Online Players</h2>
+            <p class="sub">choose your enemy mwauhahaaa</p>
+        </div>
+        <div id="users"></div>
+        <div class="lobby-footer">
+            <a href="/leaderboard.html">🏆 View Leaderboard</a>
+        </div>
+    </div>
+
+    <div id="game-section">
+        <div class="game-header">
+            <h2>Tic-Tac-Toe</h2>
+        </div>
+        <div class="board-wrap">
+            <div class="status-bar" id="status"></div>
+            <div id="board"></div>
+        </div>
+    </div>
+
+    <script>
+        const uid = "{{ uid }}";
+        const ws = new WebSocket(`ws://${window.location.host}/ws/${uid}`);
+        let mySymbol = null;
+        let currentTurn = null;
+
+        ws.onopen = () => console.log("Connected to lobby");
+
+        ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            if (data.type === "lobby_update") renderUsers(data.active_users);
+            else if (data.type === "challenge_received") showChallengeModal(data.from, data.name);
+            else if (data.type === "challenge_declined") alert("Your challenge was declined.");
+            else if (data.type === "game_start") {
+                mySymbol = data.symbol;
+                currentTurn = data.turn;
+                startGame(data.board, data.turn);
+            }
+            else if (data.type === "game_update") {
+                currentTurn = data.turn;
+                renderBoard(data.board, data.turn);
+            }
+            else if (data.type === "game_over") {
+                renderBoard(data.board, null);
+                if (data.reason === "forfeit") alert("Your opponent disconnected. You win, cause they loose!");
+                else if (data.winner === "draw") alert("It's a draw!(lame)");
+                else if (data.winner === uid) alert("You win!(that's a surprise) 🏄");
+                else alert("You lose!");
+                document.getElementById("game-section").style.display = "none";
+                document.getElementById("lobby-section").style.display = "block";
+            }
+        };
+
+        ws.onclose = () => console.log("Disconnected from server. Choose jio #notsponsored");
+
+        function renderUsers(users) {
+            const container = document.getElementById("users");
+            container.innerHTML = "";
+            users.forEach(user => {
+                const card = document.createElement("div");
+                card.className = "card";
+
+                const name = document.createElement("div");
+                name.className = "player-name";
+                name.textContent = user.name;
+
+                const elo = document.createElement("div");
+                elo.className = "elo";
+                elo.textContent = user.elo_rating + " ELO";
+
+                const btn = document.createElement("button");
+                btn.textContent = user.uid === uid ? "You 🤙" : "Challenge";
+                if (user.uid === uid) {
+                    btn.disabled = true;
+                } else {
+                    btn.onclick = () => ws.send(JSON.stringify({ type: "challenge", to: user.uid }));
+                }
+
+                card.appendChild(name);
+                card.appendChild(elo);
+                card.appendChild(btn);
+                container.appendChild(card);
+            });
+        }
+
+        function showChallengeModal(fromUserId, name) {
+            const accepted = confirm(`${name} challenged you. crush them?`);
+            ws.send(JSON.stringify({ type: "challenge_response", from: fromUserId, accepted: accepted }));
+        }
+
+        function startGame(board, turn) {
+            document.getElementById("lobby-section").style.display = "none";
+            document.getElementById("game-section").style.display = "block";
+            renderBoard(board, turn);
+        }
+
+        function renderBoard(board, turn) {
+            const boardEl = document.getElementById("board");
+            const statusEl = document.getElementById("status");
+            boardEl.innerHTML = "";
+            const isMyTurn = turn === uid;
+            statusEl.textContent = isMyTurn ? "Your turn (" + mySymbol + ")" : "Opponent's turn";
+            board.forEach((cell, index) => {
+                const btn = document.createElement("button");
+                btn.className = "cell";
+                btn.textContent = cell || "";
+                btn.disabled = !isMyTurn || cell !== null || turn === null;
+                btn.onclick = () => ws.send(JSON.stringify({ type: "move", cell: index }));
+                boardEl.appendChild(btn);
+            });
+        }
+    </script>
+</body>
+</html>

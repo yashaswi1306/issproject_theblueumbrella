@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sand: #f5efe6;
+            --ocean: #7bbfd4;
+            --ocean-dark: #5aa3bc;
+            --ocean-light: #c6e4ef;
+            --foam: #eef8fb;
+            --text: #3a5f6f;
+            --accent: #e07b6a;
+            --wave: #a8d8e8;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--sand);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 200px;
+            background: var(--ocean);
+            clip-path: ellipse(60% 100% at 50% 0%);
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            height: 140px;
+            background: var(--ocean-light);
+            clip-path: ellipse(55% 100% at 50% 100%);
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            background: white;
+            border-radius: 28px;
+            padding: 48px 40px;
+            max-width: 440px;
+            width: 90%;
+            box-shadow: 0 8px 40px rgba(90, 163, 188, 0.2);
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 2.8rem;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-family: 'Times New Roman';
+            color: var(--ocean-dark);
+            font-size: 1.8rem;
+            margin-bottom: 6px;
+        }
+
+        h1 span {
+            color: var(--accent);
+        }
+
+        .tagline {
+            color: var(--text);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 36px;
+            opacity: 0.7;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        button {
+            padding: 13px 36px;
+            font-size: 1rem;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            letter-spacing: 0.03em;
+            transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--ocean);
+            color: white;
+            box-shadow: 0 4px 16px rgba(123, 191, 212, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: var(--ocean-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(123, 191, 212, 0.5);
+        }
+
+        .btn-secondary {
+            background: var(--sand);
+            color: var(--text);
+            border: 2px solid var(--ocean-light);
+        }
+
+        .btn-secondary:hover {
+            background: var(--ocean-light);
+            transform: translateY(-2px);
+        }
+
+        #message {
+            margin-top: 16px;
+            color: var(--accent);
+            font-size: 0.88rem;
+            font-weight: 600;
+            min-height: 20px;
+        }
+
+        .divider {
+            width: 50px;
+            height: 3px;
+            background: var(--ocean-light);
+            border-radius: 4px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🏄</div>
+        <h1>Welcome, <span id="name">Loading...</span>!</h1>
+        <p class="tagline">you are logged in bbg</p>
+        <div class="divider"></div>
+        <div class="btn-group">
+            <button class="btn-primary" onclick="window.location.href='/lobby'">🌊 Diving into ze Lobby</button>
+            <button class="btn-secondary" onclick="logout()">Logout amigo</button>
+        </div>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        async function loadUser() 
+        {
+            try 
+            {
+                const res = await fetch('/api/me', {
+                    method: 'GET',
+                    credentials: 'include'
+                });
+                if (!res.ok) 
+                {
+                    window.location.href = '/';
+                    return;
+                }
+                const data = await res.json();
+                document.getElementById('name').innerText = data.name;
+            } catch (err) 
+            {
+                document.getElementById('message').innerText = "Error loading user: " + err.message;
+            }
+        }
+        async function logout() 
+        {
+            try 
+            {
+                const res = await fetch('/api/logout', {
+                    method: 'POST',
+                    credentials: 'include'
+                });
+                if (res.ok) 
+                {
+                    window.location.href = '/';
+                } 
+                else 
+                {
+                    document.getElementById('message').innerText = "Logout failed";
+                }
+            } catch (err) 
+            {
+                document.getElementById('message').innerText = "Network error: " + err.message;
+            }
+        }
+        loadUser();
+    </script>
+</body>
+</html>
