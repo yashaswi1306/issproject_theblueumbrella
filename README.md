@@ -17,8 +17,14 @@ Log in with your face, challenge classmates to Tic-Tac-Toe.
 ## Team Members:
 
 Yashaswi Priya
+
+
 Renny Sharma
+
+
 Baani Solanki
+
+
 ---
 
 ## Setup
