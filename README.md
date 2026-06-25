@@ -9,7 +9,7 @@ The assignment is available [here](https://cs6201.github.io/s26/assets/Project.p
 Good luck, have fun!
 
 # Project: The Blue Umbrella
-CS6.201 ISS S26 — Identity-Verified Multiplayer Arena
+CS6.201 ISS S26 : Identity-Verified Multiplayer Arena
 
 Log in with your face, challenge classmates to Tic-Tac-Toe.
 
