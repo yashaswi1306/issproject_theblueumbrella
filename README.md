@@ -19,7 +19,6 @@ Log in with your face, challenge classmates to Tic-Tac-Toe.
 Yashaswi Priya
 Renny Sharma
 Baani Solanki
-
 ---
 
 ## Setup
